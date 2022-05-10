@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Database\Eloquent\Model;
+
+use App\Models\Task;
 use Illuminate\Http\Request;
 
 class TaskController extends Controller
@@ -13,7 +16,9 @@ class TaskController extends Controller
      */
     public function index()
     {
-       return view('index');
+        $datas = Task::orderBy('created_at', 'desc')->get();
+
+       return view('index',compact('datas'));
     }
 
     /**
