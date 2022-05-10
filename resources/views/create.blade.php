@@ -1,15 +1,34 @@
 @extends('layout')
 @section('main-content')
-<h4 class="pb-3">New Task</h4>
+<div>
+    <div class="float-left">
+        <h4 class="pb-2">My Tasks</h4>
+    </div>
+    <div class="float-right ">
+        <a href="{{ route('Task.index') }}"class="btn btn-info">All Tasks</a>
+    </div>
+    <div class="clearfix">
 
-<div class="card">
-    <div class="card-header">
-        First Task
     </div>
-    <div class="card-body">
-        <div class="card-text">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, itaque quasi. Minima consequatur commodi, excepturi sed dolore aliquam quibusdam illum veniam enim quisquam, repudiandae ut cum quo nam nostrum dolores.
+</div>
+<div class="card card-body bg-light p-4">
+    <form action="{{ route('Task.store') }}"method="Post">@csrf
+        <div class="mb-3">
+            <label for="title" class="form-label">Task Title</label>
+            <input type="text"id="title" class="form-control"name="title">
         </div>
-    </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Task Description</label>
+            <textarea name="description" class="form-control"id="description"  rows="5"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="status" class="form-label">status</label>
+            <select class="form-control"name="status" id="">
+                <option value="Todo">Todo</option>
+                <option value="Done">Done</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
 </div>
 @endsection
