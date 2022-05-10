@@ -5,7 +5,7 @@
         <h4 class="pb-2">My Tasks</h4>
     </div>
     <div class="float-right ">
-        <a href="{{ route('Task.index') }}"class="btn btn-info">All Tasks</a>
+        <a href="{{ route('Task.index') }}"class="btn btn-info"><i class="fas fa-arrow-left mr-1"></i>All Tasks</a>
     </div>
     <div class="clearfix">
 
@@ -28,7 +28,9 @@
                 <option value="Done">Done</option>
             </select>
         </div>
-        <button type="submit" class="btn btn-primary">Save</button>
+        <a href="{{ route('Task.index') }}"class="btn btn-info"><i class="fas fa-arrow-left mr-1"></i>Cancel</a>
+        <button type="submit" class="btn btn-success"><i class="fas fa-check mr-1"></i>Save</button>
+
     </form>
 </div>
 @endsection
