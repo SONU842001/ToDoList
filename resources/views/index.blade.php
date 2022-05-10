@@ -34,7 +34,7 @@
                         </span>
                         @endif
 
-                        <small>{{ $data->updated_at->diffForHumans() }} </small>
+                        <small>Updated_at:{{ $data->updated_at->diffForHumans() }} </small>
 
                     </div>
 

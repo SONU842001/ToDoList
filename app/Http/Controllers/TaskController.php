@@ -71,8 +71,8 @@ class TaskController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        //
+    {   $taskdata = Task::findOrFail($id);
+        return view('edit',compact('taskdata'));
     }
 
     /**
@@ -84,7 +84,17 @@ class TaskController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'title'=>'required'
+        ]);
+        $taskdata = Task::findOrFail($id);
+        $taskdata->title = $request->title;
+        $taskdata->description = $request->description;
+        $taskdata->status = $request->input('status');
+        $taskdata->save();
+        return redirect()->route('Task.index');
+
+
     }
 
     /**
