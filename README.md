@@ -1,3 +1,16 @@
+Home Page
+
+![Untitled](https://user-images.githubusercontent.com/54150646/167778350-df112bb0-8a40-4d27-8aa7-0a3f0edd288c.jpg)
+
+Showing data in json format
+![Untitled](https://user-images.githubusercontent.com/54150646/167778818-306dfdc1-f485-4e82-b2e7-c4a91a50775a.jpg)
+
+
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
