@@ -16,8 +16,8 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $datas = Task::orderBy('created_at', 'desc')->get();
-
+        $datas = Task::orderBy('created_at', 'ASC')->get();
+         dd(json_encode($datas));
        return view('index',compact('datas'));
     }
 
